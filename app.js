@@ -1,7 +1,13 @@
 'use strict';
-const number = process.argv[2] || 0;
-let sum = 0;
-for (let i = 1; i <= number; i++) {
-  sum = sum + i;
+let x = 5.0;
+
+while(true){
+  let x2 = x - (x * x - 3) / (x * 2);
+
+  if(Math.abs(x2-x)<0.00001){
+    break;
+  }
+  x = x2;
+
 }
-console.log(sum);
+console.log(x);
